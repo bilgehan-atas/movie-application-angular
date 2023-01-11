@@ -1,0 +1,73 @@
+@import "../../styling/utilities/utilities";
+$color_1: #fff;
+
+.carousel-container {
+  @include flexContainer(column);
+  min-height: 250px;
+  flex: 1 1 auto;
+
+  .slider {
+    position: relative;
+    @include flexContainer(column);
+    flex: 1 1 auto;
+
+    .rightArrow {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 32px;
+      font-size: 45px;
+      color: $color_1;
+      z-index: 1;
+      cursor: pointer;
+    }
+    .leftArrow {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 32px;
+      font-size: 45px;
+      color: $color_1;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      color: $color_1;
+      @include flexContainer(column, flex-end);
+      flex: 1 1 auto;
+      overflow: hidden;
+
+      .overlay {
+        @include flexContainer(column);
+        background-color: rgba(0, 0, 0, 0.5);
+        h1 {
+          margin: 0;
+          line-height: 1rem;
+          align-self: center;
+          padding: 1rem;
+        }
+        p {
+          align-self: center;
+          margin: 1rem;
+        }
+
+        .dotsContainer {
+          display: flex;
+          justify-content: center;
+
+          .dot {
+            margin: 0 3px;
+            cursor: pointer;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

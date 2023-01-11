@@ -1,0 +1,11 @@
+@import "../../styling/utilities/utilities";
+.card-group {
+  @include flexContainer(row, center, stretch, wrap);
+  gap: 1rem;
+  .card-container {
+    display: flex;
+    flex: 1 0 0%;
+    min-width: 450px;
+    max-width: 660px;
+  }
+}

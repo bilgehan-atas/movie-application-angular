@@ -1,0 +1,27 @@
+@import "../../styling/utilities/utilities";
+.navigation-container {
+  @include flexContainer(row, space-between, center);
+
+  ul {
+    @include flexContainer(row, flex-start, center);
+    gap: 1rem;
+    button {
+      @extend %btn;
+      @include btn-style("text", "info");
+    }
+  }
+
+  .searchbar {
+    @include flexContainer(row, flex-start, center);
+    gap: 1rem;
+    input {
+      font-weight: 500;
+      font-size: 0.875rem;
+      padding: 5px 6px;
+    }
+    button {
+      @extend %btn;
+      @include btn-style("outlined", "info");
+    }
+  }
+}

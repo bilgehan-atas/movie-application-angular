@@ -1,0 +1,13 @@
+<div *ngIf="movie" class="card">
+  <img
+    src="https://image.tmdb.org/t/p/w500{{ movie.backdrop_path }}"
+    alt="{{ movie.title }}"
+  />
+  <div class="card-body">
+    <h1>{{ movie.title }}</h1>
+    <p>{{ movie.overview }}</p>
+  </div>
+  <div class="card-footer">
+    <span>Score: {{ movie.vote_average }}</span>
+  </div>
+</div>

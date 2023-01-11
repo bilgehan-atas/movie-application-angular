@@ -1,0 +1,12 @@
+<nav class="navigation-container">
+  <h1>{{ title }}</h1>
+  <ul>
+    <li *ngFor="let navitem of navitems">
+      <button>{{ navitem }}</button>
+    </li>
+  </ul>
+  <div class="searchbar">
+    <input placeholder="Search" type="text" />
+    <button>Search</button>
+  </div>
+</nav>

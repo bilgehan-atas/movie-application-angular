@@ -1,0 +1,13 @@
+@import "../../styling/utilities/utilities";
+
+.jumbotron-container {
+  h1 {
+    font-size: calc(1.375rem + 1vw);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  button {
+    @extend %btn;
+    @include btn-style("contained", "info");
+  }
+}

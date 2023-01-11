@@ -1,0 +1,8 @@
+@import "../styling/utilities/utilities";
+.main-container {
+  @include flexContainer(column);
+  .head-view {
+    height: 100vh;
+    @include flexContainer(column);
+  }
+}

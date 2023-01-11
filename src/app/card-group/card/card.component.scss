@@ -1,0 +1,32 @@
+@import "../../../styling/utilities/utilities";
+
+.card {
+  @include flexContainer(column, flex-start, flex-start);
+  background-color: $primary-clr;
+
+  &:hover {
+    transform: scale(1.02);
+    .card-body {
+      h1 {
+        @include line-clamp(100, webkit);
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .card-body {
+    flex: 1 auto;
+    h1 {
+      line-height: 2.2rem;
+      @include line-clamp(1, webkit);
+    }
+  }
+
+  .card-footer {
+    width: 100%;
+    background-color: $cardfooter-clr;
+  }
+}
