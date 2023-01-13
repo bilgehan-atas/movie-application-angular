@@ -1,4 +1,14 @@
 @import "../styling/utilities/utilities";
+
+app-carousel {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+app-jumbotron {
+  padding-bottom: 1rem;
+}
+
 .main-container {
   @include flexContainer(column);
   .head-view {

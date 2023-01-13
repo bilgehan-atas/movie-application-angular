@@ -23,16 +23,26 @@ export class CarouselComponent {
     this.currentIndex = nextIndex;
   }
 
-  goToPrevious(): void {
+  clickGoToNext(): void {
+    clearInterval(this.nextIntervalHandler);
+    this.goToNext();
+  }
+
+  clickGoToPrevious(): void {
+    clearInterval(this.nextIntervalHandler);
     const isFirst = this.currentIndex === 0;
     const previousIndex = isFirst
       ? this.slides.length - 1
       : this.currentIndex - 1;
     this.currentIndex = previousIndex;
   }
-  goToSlide(slideIndex: number): void {
+  clickGoToSlide(slideIndex: number): void {
+    clearInterval(this.nextIntervalHandler);
     this.currentIndex = slideIndex;
   }
+  nextIntervalHandler = setInterval(() => {
+    this.goToNext();
+  }, 4000);
 
   constructor(private moviesService: MoviesService) {}
 
