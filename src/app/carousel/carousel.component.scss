@@ -7,8 +7,8 @@
   color: $primary-clr;
 
   .slider {
-    position: relative;
     @include flexContainer(column);
+    position: relative;
     flex: 1 1 auto;
 
     .rightArrow {
@@ -20,6 +20,7 @@
       z-index: 1;
       cursor: pointer;
     }
+
     .leftArrow {
       position: absolute;
       top: 50%;
@@ -31,12 +32,12 @@
     }
 
     .slide {
+      @include flexContainer(column, flex-end);
       width: 100%;
       height: 100%;
       border-radius: 10px;
       background-size: cover;
       background-position: center;
-      @include flexContainer(column, flex-end);
       flex: 1 1 auto;
       overflow: hidden;
       transition: all 0.5s ease;
@@ -44,12 +45,14 @@
       .overlay {
         @include flexContainer(column);
         background-color: rgba(0, 0, 0, 0.5);
+
         h1 {
           margin: 0;
           line-height: 1rem;
           align-self: center;
           padding: 1rem;
         }
+
         p {
           display: flex;
           align-self: center;

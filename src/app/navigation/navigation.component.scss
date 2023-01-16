@@ -1,9 +1,10 @@
 @import "../../styling/utilities/utilities";
 .navigation-container {
-  @include flexContainer(row, space-between, center);
+  @include flexContainer(row, space-between, center, wrap);
 
   ul {
     @include flexContainer(row, flex-start, center);
+    flex: 1;
     gap: 1rem;
     button {
       @extend %btn;
@@ -12,7 +13,8 @@
   }
 
   .searchbar {
-    @include flexContainer(row, flex-start, center);
+    @include flexContainer(row, flex-end);
+    flex: 1;
     gap: 1rem;
     input {
       font-weight: 500;
